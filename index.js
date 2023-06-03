@@ -13,23 +13,23 @@ let countMaxElement = 0;
 
 for(let i = 0; i < numbers.length; i++){
    if(numbers[i] > 0){
-    sumPozitifElements = sumPozitifElements + numbers[i];
-    countPozitiveElements = countPozitiveElements + 1;
-    productPozitiveElements = productPozitiveElements * numbers[i];
+    sumPozitifElements += numbers[i];
+    countPozitiveElements ++;
+    productPozitiveElements *= numbers[i];
 
    }
    if (numbers[i] < 0){
-    countNegativeElements = countNegativeElements + 1;
+    countNegativeElements++;
    }
 
    if(numbers[i] > 0 && numbers[i] % 2 === 0){
-    evenPozitiveElements = evenPozitiveElements + 1;
-    sumEvenPozitiveElements = sumEvenPozitiveElements + numbers[i];
+    evenPozitiveElements++;
+    sumEvenPozitiveElements += numbers[i];
 
    }
    if(numbers[i] > 0 && numbers[i] % 2 !== 0) {
-    oddPozitiveElements = oddPozitiveElements + 1;
-    sumOddPozitiveElements = sumOddPozitiveElements + numbers[i];
+    oddPozitiveElements++;
+    sumOddPozitiveElements += numbers[i];
     }
 
     if(numbers[i] > maxElement){
@@ -40,14 +40,14 @@ for(let i = 0; i < numbers.length; i++){
 }
 
 
-let result = "The sum of positive elements is " + sumPozitifElements + ". ";
-let result2 = "\nThe maximum element of the array is " + maxElement + ". ";
-let result3 = "\nIs the sequence number of the maximum element " + countMaxElement + ". ";
-let result4 = "\nThere are a number of positive elements " + countPozitiveElements + ". ";
-let result5 = "\nThere are a number of negative elements " + countNegativeElements + ". ";
-let result6 = "\nNumber of odd positive elements is " + oddPozitiveElements + ". ";
-let result7 = "\nNumber of even positive elements " + evenPozitiveElements + ". ";
-let result8 = "\nThe sum of even positive elements is " + sumEvenPozitiveElements + ". ";
-let result9 = "\nThe sum of odd positive elements is " + sumOddPozitiveElements + ". ";
-let result10 = "\n The product of positive elements is " + productPozitiveElements + ". ";
+const result = "The sum of positive elements is " + sumPozitifElements + ". ";
+const result2 = "\nThe maximum element of the array is " + maxElement + ". ";
+const result3 = "\nIs the sequence number of the maximum element " + countMaxElement + ". ";
+const result4 = "\nThere are a number of positive elements " + countPozitiveElements + ". ";
+const result5 = "\nThere are a number of negative elements " + countNegativeElements + ". ";
+const result6 = "\nNumber of odd positive elements is " + oddPozitiveElements + ". ";
+const result7 = "\nNumber of even positive elements " + evenPozitiveElements + ". ";
+const result8 = "\nThe sum of even positive elements is " + sumEvenPozitiveElements + ". ";
+const result9 = "\nThe sum of odd positive elements is " + sumOddPozitiveElements + ". ";
+const result10 = "\n The product of positive elements is " + productPozitiveElements + ". ";
     alert(result + result2 + result3 + result4 + result5 + result6 + result7 + result8 + result9 + result10);
